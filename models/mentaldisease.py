@@ -19,6 +19,6 @@ class mentaldisease(models.Model):
     
     add_date = fields.DateTime(string="Add date", required=True)
     
-    diagnosis_ids = fields.One2many('aether.diagnosis', 'mentaldisease_id', string="Diagnosis")
+    diagnosis_ids = fields.One2many('aether.diagnosis', 'mentalDisease', string="Diagnosis")
 
     
