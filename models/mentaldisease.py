@@ -7,7 +7,7 @@ from odoo import models
 class mentaldisease(models.Model):
     _name = 'aether.mentaldisease'
 
-    admin_id = fields.Many2one('res.users', ondelete='set null', string="Admin", required=True)
+    admin_id = fields.Many2one('res.users',string="Admin", required=True)
     
     enum_mental_disease = fields.Selection([('mentalillness', 'Mental illness'), ('mentaldisorder', 'Mental disorder')], required=True)
     
