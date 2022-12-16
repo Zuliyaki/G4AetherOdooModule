@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "aether",
+    'name': "Aether",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        A app for managing psychologist and patients""",
 
     'description': """
-        Long description of module's purpose
+        Allows:
+            - Create new psychologist and patients
+            - Make appointments
     """,
 
-    'author': "My Company",
+    'author': "Aether",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
