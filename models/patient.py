@@ -5,9 +5,9 @@ from odoo import models
 class patient(models.Model):
     _inherit = 'res.users'
     
-    diagnosis = fields.OneToMany('aether.diagnosis', 'patient', String="Diagnosis")
-    dailynote = fields.OneToMany('aether.dailynote', 'dnPatient', String="Daily Note")
+    diagnosis = fields.One2many('aether.diagnosis', 'patient', string="Diagnosis")
+    dailynote = fields.One2many('aether.dailynote', 'dnPatient', string="Daily Note")
     psychologist = fields.Many2one('res.users', ondelete='cascade',
                               string="Psychologist", required=True)
-    
+    appointment = fields.One2many('aether.appointments', 'patient', string ="Appointment")
     

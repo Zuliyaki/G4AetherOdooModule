@@ -5,5 +5,6 @@ from odoo import models
 class psychologist(models.Model):
     _inherit = 'res.users'
     
-    diagnosis=fields.OneToMany('aether.diagnosis','psychologist',String="Diagnosises")
-    patient = fields.OneToMany('aether.patient', 'psychologist', String="Patients")
+    diagnosis=fields.One2many('aether.diagnosis','psychologist', string="Diagnosises")
+    patient = fields.One2many('aether.patient', 'psychologist', string="Patients")
+    appointment = fields.One2many('aether.appointments', 'psychologist', string="Appointments")

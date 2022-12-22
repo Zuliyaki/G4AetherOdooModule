@@ -21,7 +21,6 @@ class diagnosis(models.Model):
     mentalDisease = fields.Many2one('aether.mentaldisease', ondelete='cascade',
                                     string="MentalDisease", required=True)
     onTherapy = fields.Boolean(string="Active", required=True)
-#    treatment=fields.OneToMany('aether.treatment','diagnosis',String="Treatment") para simplificar el model
-#esto seria la simplificacion del modelo, solo se trataria con una medicación, quitariamos días y horas del dia también
+    
     medicationType = fields.Selection([('ANTIDEPRESSANTS', 'ANTIDEPRESSANTS'), ('ANTIANXIETYMEDICATIONS', 'ANTI ANXIETY MEDICATIONS'),
                                       ('STIMULANTS', 'STIMULANTS'), ('ANTIPSYCHOTICS', 'ANTI PSYCHOTICS'), ('MOODSTABILIZERS', 'MOOD STABILIZERS')], required=True)

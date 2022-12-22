@@ -6,12 +6,12 @@ from odoo import models
 
 class mentaldisease(models.Model):
     _name = 'aether.mentaldisease'
+    
+    name = fields.Char(required=True)
+    
+    admin_id = fields.Many2one('res.users', string="Admin", required=True)
 
-    admin_id = fields.Many2one('res.users',string="Admin", required=True)
-    
-    enum_mental_disease = fields.Selection([('mentalillness', 'Mental illness'), ('mentaldisorder', 'Mental disorder')], required=True)
-    
-    name = fields.Char(string="Name", required=True)
+    enum_mental_disease = fields.Selection([('MENTALILLNESS', 'Mental illness'), ('MENTALDISORDER', 'Mental disorder')], required=True)
     
     description = fields.Text(string="Description", required=True)
     
