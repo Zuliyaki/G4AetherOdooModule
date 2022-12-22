@@ -7,11 +7,11 @@ from odoo import api
 from odoo import fields
 from odoo import models
 
-class medication(models.Model):
-    _name = 'aether.medication'
-    
-    name = fields.Char(required=True)
-    description = fields.Text(required=True)
-    medicationType = fields.Selection([('ANTIDEPRESSANTS', 'ANTIDEPRESSANTS'), ('ANTIANXIETYMEDICATIONS', 'ANTI ANXIETY MEDICATIONS'),
-                                      ('STIMULANTS', 'STIMULANTS'), ('ANTIPSYCHOTICS', 'ANTI PSYCHOTICS'), ('MOODSTABILIZERS', 'MOOD STABILIZERS')], required=True)
-    treatment = fields.OneToMany('aether.treatment', 'medication', String="treatments")
+#class medication(models.Model):
+ #   _name = 'aether.medication'
+ #   
+ #   name = fields.Char(required=True)
+ #   description = fields.Text(required=True)
+ #   medicationType = fields.Selection([('ANTIDEPRESSANTS', 'ANTIDEPRESSANTS'), ('ANTIANXIETYMEDICATIONS', 'ANTI ANXIETY MEDICATIONS'),
+ #                                     ('STIMULANTS', 'STIMULANTS'), ('ANTIPSYCHOTICS', 'ANTI PSYCHOTICS'), ('MOODSTABILIZERS', 'MOOD STABILIZERS')], required=True)
+ #   treatment = fields.OneToMany('aether.treatment', 'medication', String="treatments")
