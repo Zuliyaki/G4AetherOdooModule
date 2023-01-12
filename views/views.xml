@@ -40,12 +40,10 @@
     -->
 
     <!-- Top menu item -->
-    <!--
-    <menuitem name="aether" id="aether.menu_root"/>
-    -->
+    <menuitem name="Aether" id="aether.menu_root"/>
     <!-- menu categories -->
+    <menuitem name="Aether Management" id="aether.menu_1" parent="aether.menu_root"/>
     <!--
-    <menuitem name="Menu 1" id="aether.menu_1" parent="aether.menu_root"/>
     <menuitem name="Menu 2" id="aether.menu_2" parent="aether.menu_root"/>
     -->
     <!-- actions -->
