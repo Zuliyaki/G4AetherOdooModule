@@ -1,0 +1,34 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="aether.dailynotes_list">
+      <field name="name">aether list</field>
+      <field name="model">aether.dailynote</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" 
+            id="aether.action_window_4">
+      <field name="name">aether window</field>
+      <field name="res_model">aether.dailynotes</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- actions -->
+    <menuitem name="List" 
+              id="aether.menu_4_list" 
+              parent="aether.menu_4"
+              action="aether.action_window_4"/>
+    <!--
+    <menuitem name="Server to list" id="aether" parent="aether.menu_2"
+              action="aether.action_server"/>
+    -->
+  </data>
+</odoo>
