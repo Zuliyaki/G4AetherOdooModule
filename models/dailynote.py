@@ -9,7 +9,7 @@ from odoo import models
 class DailyNote(models.Model):
     _name = 'aether.dailynote'
     name = fields.Char(required=True)
-    dnPatient = Many2one('res.users', string="Patient", required=True)
+    dnPatient = fields.Many2one('res.users', string="Patient", required=True)
     dnNoteText = fields.Text(string="Text", required=True)
     dnNoteComment = fields.Text(string="Comment")
     dnNoteStatus = fields.Selection([('READED', 'Readed'),

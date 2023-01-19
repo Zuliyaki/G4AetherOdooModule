@@ -9,8 +9,9 @@ from odoo import models
 class Appointment(models.Model):
     _name = "aether.appointments"
     name = fields.Char(required=True)
+    
     appointmentChange = fields.Boolean(string="AppointmentChange", required=True)
     appointmentDate = fields.Date(string="AppointmentDate", required=True)
-    patient = fields.Many2one('res.users', ondelete='cascade', string="Patient", required=True)
-    psychologist = fields.Many2one('res.users', ondelete='cascade', string="Psychologist", required=True)
+    patient = fields.Many2one('res.users', string="Patient", required=True)
+    psychologist = fields.Many2one('res.users', string="Psychologist", required=True)
  

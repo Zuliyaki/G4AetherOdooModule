@@ -22,7 +22,7 @@
             <field name="res_model">aether.aether</field>
             <field name="view_mode">tree,form</field>
         </record>
-
+  
         <!-- server action to the one above -->
         <!--
         <record model="ir.actions.server" id="aether.action_server">

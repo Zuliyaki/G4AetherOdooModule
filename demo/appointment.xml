@@ -1,6 +1,6 @@
 <odoo>
     <data>      
-        <record id="object0" model="aether.aether"> 
+        <record id="object0" model="aether.appointments"> 
             <field name="name">Object 0</field> 
             <field name="value">0</field> 
         </record> 
