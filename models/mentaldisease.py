@@ -9,7 +9,7 @@ class mentaldisease(models.Model):
     
     name = fields.Char(required=True)
     
-    admin_id = fields.Many2one('res.users', string="Admin", required=True)
+    admin_ids = fields.Many2one('res.users', string="Admin", required=True)
 
     enum_mental_disease = fields.Selection([('MENTALILLNESS', 'Mental illness'), ('MENTALDISORDER', 'Mental disorder')], required=True)
     
@@ -17,7 +17,7 @@ class mentaldisease(models.Model):
     
     sympton = fields.Text(string="Sympton", required=True)
     
-    add_date = fields.DateTime(string="Add date", required=True)
+    add_date = fields.Date(string="Add date", required=True)
     
     diagnosis_ids = fields.One2many('aether.diagnosis', 'mentalDisease', string="Diagnosis")
 

@@ -2,13 +2,13 @@
   <data>
     <!-- explicit list view definition -->
     <record model="ir.ui.view" id="aether.dailynotes_list">
-      <field name="name">aether list</field>
+      <field name="name">aether daily note list</field>
       <field name="model">aether.dailynote</field>
       <field name="arch" type="xml">
         <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
+          <field name="Patient"/>
+          <field name="Date"/>
+          <!-- <field name="value2"/> -->
         </tree>
       </field>
     </record>
