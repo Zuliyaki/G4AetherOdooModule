@@ -8,6 +8,7 @@
     'description': """
         Allows:
             - Create new psychologist and patients
+            - CRUD Daily Notes
             - Make appointments
     """,
 
@@ -26,8 +27,9 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        # 'views/views.xml',
-        # 'views/viewsDailyNotes.xml',
+        'views/menu.xml',
+        'views/views.xml',
+        'views/viewsDailyNotes.xml',
         # 'views/templates.xml',
     ],
     # only loaded in demonstration mode

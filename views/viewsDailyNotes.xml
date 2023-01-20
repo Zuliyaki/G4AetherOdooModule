@@ -1,34 +1,85 @@
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
-    <record model="ir.ui.view" id="aether.dailynotes_list">
-      <field name="name">aether daily note list</field>
-      <field name="model">aether.dailynote</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="Patient"/>
-          <field name="Date"/>
-          <!-- <field name="value2"/> -->
-        </tree>
-      </field>
-    </record>
-
-    <!-- actions opening views on models -->
-    <record model="ir.actions.act_window" 
-            id="aether.action_window_4">
-      <field name="name">aether window</field>
-      <field name="res_model">aether.dailynotes</field>
-      <field name="view_mode">tree,form</field>
-    </record>
-
-    <!-- actions -->
-    <menuitem name="List" 
-              id="aether.menu_4_list" 
-              parent="aether.menu_4"
-              action="aether.action_window_4"/>
-    <!--
-    <menuitem name="Server to list" id="aether" parent="aether.menu_2"
-              action="aether.action_server"/>
-    -->
-  </data>
+    <data>
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" 
+                id="action_list_create_dailynote">
+            <field name="name">Daily Notes</field>
+            <field name="res_model">aether.dailynote</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <!-- actions -->
+        <menuitem id="menu_dailynotes" 
+                  parent="aether.management"
+                  name="Daily Notes"/>
+        
+        <menuitem id="menu_dailynotes_create" 
+                  parent="menu_dailynotes"
+                  name="Create daily note"
+                  action="action_list_create_dailynote"/>
+        
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="aether.dailynotes_tree">
+            <field name="name">aether daily note tree</field>
+            <field name="model">aether.dailynote</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="dnPatient"/>
+                    <field name="dnDayScore"/>
+                    <field name="dnNoteText"/>
+                    <field name="dnNoteDate"/>
+                    <field name="dnNoteDateLastEdited"/>
+                    <field name="dnNoteStatus"/>
+                    <field name="dnNoteReadable"/>
+                </tree>
+            </field>
+        </record>
+        
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="aether.dailynotes_form">
+            <field name="name">aether daily note form</field>
+            <field name="model">aether.dailynote</field>
+            <field name="arch" type="xml">
+                <form string="DailyNote form">
+                    <group colspan="4">
+                        <group col="2">
+                            <separator string="Note Info" colspan="2"/>
+                            <field name="dnPatient"/>
+                            <field name="dnDayScore"/>
+                            <field name="dnNoteReadable"/>
+                            <field name="dnNoteStatus"/>
+                        </group>
+                        <group col="2">
+                            <separator string="Date" colspan="2"/>
+                            <field name="dnNoteDate"/>
+                            <field name="dnNoteDateLastEdited" readonly="1"/>
+                        </group>
+                        <group colspan="4" rowspan="8">
+                            <separator string="Note Content" colspan="2"/>
+                            <field name="dnNoteText"/>
+                            <separator string="Note Response" colspan="2"/>
+                            <field name="dnNoteComment" readonly="1"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="aether.dailynotes_search">
+            <field name="name">aether daily note search</field>
+            <field name="model">aether.dailynote</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="dnPatient"/>
+                    <field name="dnDayScore"/>
+                    <field name="dnNoteDate"/>
+                </search>
+            </field>
+        </record>
+        <!--
+        <menuitem name="Server to list" id="aether" parent="aether.menu_2"
+                  action="aether.action_server"/>
+        -->
+    </data>
 </odoo>
