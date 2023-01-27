@@ -27,6 +27,7 @@
                     <field name="appointmentDate"/>
                     <field name="patient"/>
                     <field name="psychologist"/>
+                    <field name="name"/>
                 </tree>
             </field>
         </record>
@@ -44,6 +45,7 @@
                             <field name="appointmentDate"/>
                             <field name="patient"/>
                             <field name="psychologist"/>
+                            <field name="name"/>
                         </group>
                     </group>
                 </form>
@@ -60,6 +62,7 @@
                     <field name="appointmentDate"/>
                     <field name="patient"/>
                     <field name="psychologist"/>
+                    <field name="name"/>
                 </search>
             </field>
         </record>
