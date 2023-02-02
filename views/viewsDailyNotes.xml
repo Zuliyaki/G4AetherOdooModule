@@ -47,7 +47,7 @@
                             <field name="dnPatient"/>
                             <field name="dnDayScore"/>
                             <field name="dnNoteReadable"/>
-                            <field name="dnNoteStatus"/>
+                            <field name="dnNoteStatus" readonly="1"/>
                         </group>
                         <group col="2">
                             <separator string="Date" colspan="2"/>
@@ -58,7 +58,7 @@
                             <separator string="Note Content" colspan="2"/>
                             <field name="dnNoteText"/>
                             <separator string="Note Response" colspan="2"/>
-                            <field name="dnNoteComment" readonly="1"/>
+                            <field name="dnNoteComment"/>
                         </group>
                     </group>
                 </form>

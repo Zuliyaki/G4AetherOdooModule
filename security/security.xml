@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <record id="group_patient" model="res.groups">
+            <field name="name">Aehter / Patient</field>
+        </record>
+        <record id="group_psychologist" model="res.groups">
+            <field name="name">Aehter / Psychologist</field>
+        </record>
+    </data>
+</odoo>
