@@ -10,7 +10,8 @@
         
         <!-- actions -->
         <menuitem id="menu_appointments" 
-                  name="Aether"/>
+                  parent="aether.management"
+                  name="Apointment"/>
 
         <menuitem id="menu_appointment_create" 
                   parent="menu_appointments"
@@ -41,11 +42,11 @@
                     <group colspan="4">
                         <group col="2">
                             <separator string="Appointment Info" colspan="2"/>
+                            <field name="name"/>
                             <field name="appointmentChange"/>
                             <field name="appointmentDate"/>
                             <field name="patient"/>
                             <field name="psychologist"/>
-                            <field name="name"/>
                         </group>
                     </group>
                 </form>
@@ -58,13 +59,13 @@
             <field name="model">aether.appointments</field>
             <field name="arch" type="xml">
                 <search>
-                    <field name="appointmentChange"/>
                     <field name="appointmentDate"/>
                     <field name="patient"/>
                     <field name="psychologist"/>
-                    <field name="name"/>
                 </search>
             </field>
         </record>
     </data>
 </odoo>
+
+
