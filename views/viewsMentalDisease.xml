@@ -1,0 +1,86 @@
+<odoo>
+    <data>
+        
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" 
+                id="action_list_create_mentaldisease">
+            <field name="name">Mental Disease</field>
+            <field name="res_model">aether.mentaldisease</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- actions -->
+        <menuitem id="menu_mentaldisease" 
+                  parent="aether.management"
+                  name="Mental Disease"/>
+        
+        <menuitem id="menu_mentaldisease_create" 
+                  parent="menu_mentaldisease"
+                  name="Create mental disease"
+                  action="action_list_create_mentaldisease"/>
+        
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="aether.mentaldisease_list">
+            <field name="name">aether mental disease tree</field>
+            <field name="model">aether.mentaldisease</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="admin_ids"/>
+                    <field name="enum_mental_disease"/>
+                    <field name="description"/>
+                    <field name="sympton"/>
+                    <field name="add_date"/>
+                </tree>
+            </field>
+        </record>
+        
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="aether.mentaldisease_form">
+            <field name="name">aether mental disease form</field>
+            <field name="model">aether.mentaldisease</field>
+            <field name="arch" type="xml">
+                <form string="MentalDisease form">
+                    <group colspan="4">
+                        <group col="2">
+                            <separator string="Admin Info" colspan="2"/>
+                            <field name="admin_ids"/>
+                            <separator string="Mental Disease Info" colspan="2"/>
+                            <field name="name"/>
+                            <field name="enum_mental_disease"/>
+                        </group>
+                        <group col="2">
+                            <separator string="Date" colspan="2"/>
+                            <field name="add_date"/>
+                        </group>
+                        <group colspan="4" rowspan="8">
+                            <separator string="Sympton" colspan="2"/>
+                            <field name="sympton"/>
+                            <separator string="Description" colspan="2"/>
+                            <field name="description"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="aether.dailynotes_search">
+            <field name="name">aether mental disease search</field>
+            <field name="model">aether.mentaldisease</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="admin_ids"/>
+                    <field name="enum_mental_disease"/>
+                </search>
+            </field>
+        </record>
+
+        
+        <!--
+        <menuitem name="Server to list" id="aether" parent="aether.menu_2"
+                  action="aether.action_server"/>
+        -->
+    </data>
+</odoo>

@@ -31,6 +31,7 @@
         'views/menu.xml',
         'views/views.xml',
         'views/viewsDailyNotes.xml',
+        'views/viewsMentalDisease.xml',
         # 'views/templates.xml',
     ],
     # only loaded in demonstration mode
