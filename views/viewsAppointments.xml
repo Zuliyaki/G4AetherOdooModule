@@ -1,0 +1,71 @@
+<odoo>
+    <data>
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" 
+                id="action_list_create_appointments">
+            <field name="name">Create appointment</field>
+            <field name="res_model">aether.appointments</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <!-- actions -->
+        <menuitem id="menu_appointments" 
+                  parent="aether.management"
+                  name="Apointment"/>
+
+        <menuitem id="menu_appointment_create" 
+                  parent="menu_appointments"
+                  name="Create Appointment"
+                  action="action_list_create_appointments"/> 
+        
+        <!-- explicit tree view definition -->
+        <record model="ir.ui.view" id="aether.appointments_tree">
+            <field name="name">aether appointment tree</field>
+            <field name="model">aether.appointments</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="appointmentChange"/>
+                    <field name="appointmentDate"/>
+                    <field name="patient"/>
+                    <field name="psychologist"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        
+        <!-- explicit form view definition-->
+        <record model="ir.ui.view" id="aether.appointments_form">
+            <field name="name">aether appointment form</field>
+            <field name="model">aether.appointments</field>
+            <field name="arch" type="xml">
+                <form string="Appointment form">
+                    <group colspan="4">
+                        <group col="2">
+                            <separator string="Appointment Info" colspan="2"/>
+                            <field name="name"/>
+                            <field name="appointmentChange"/>
+                            <field name="appointmentDate"/>
+                            <field name="patient"/>
+                            <field name="psychologist"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record> 
+        
+        <!-- explicit search view definition -->
+        <record model="ir.ui.view" id="aether.appointments_search">
+            <field name="name">aether appointment search</field>
+            <field name="model">aether.appointments</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="appointmentDate"/>
+                    <field name="patient"/>
+                    <field name="psychologist"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>
+
+

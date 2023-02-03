@@ -1,0 +1,85 @@
+<odoo>
+    <data>
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" 
+                id="action_list_create_diagnosis">
+            <field name="name">Diagnsosis</field>
+            <field name="res_model">aether.diagnosis</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <!-- actions -->
+        <menuitem id="menu_diagnosises" 
+                  parent="aether.management"
+                  name="Diagnosises"/>
+        
+        <menuitem id="menu_diagnosises_create" 
+                  parent="menu_diagnosises"
+                  name="Create Diagnosis"
+                  action="action_list_create_diagnosis"/>
+        
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="aether.diagnosises_tree">
+            <field name="name">aether diagnosises tree</field>
+            <field name="model">aether.diagnosis</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="diagnosisDate"/>
+                    <field name="lastDiagnosisChangeDate"/>
+                    <field name="patient"/>
+                    <field name="psychologist"/>
+                    <field name="mentalDisease"/>
+                    <field name="onTherapy"/>
+                    <field name="medicationType"/>
+                </tree>
+            </field>
+        </record>
+        
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="aether.diagnosis_form">
+            <field name="name">aether Diagnosis form</field>
+            <field name="model">aether.diagnosis</field>
+            <field name="arch" type="xml">
+                <form string="Diagnosis form">
+                    <group colspan="4">
+                        <group col="2">
+                            <separator string="Diagnosis Info" colspan="2"/>
+                            <field name="name"/>
+                            <field name="patient"/>
+                            <field name="psychologist"/>
+                            <field name="mentalDisease"/>
+                            <field name="medicationType"/>
+                        </group>
+                        <group col="2">
+                            <separator string="Date" colspan="2"/>
+                            <field name="diagnosisDate"/>
+                            <separator string="Date" colspan="2"/>
+                            <field name="lastDiagnosisChangeDate"/>
+                        </group>
+                        <group colspan="4" rowspan="8">
+                            <separator string="Is On Teraphy?" colspan="2"/>
+                            <field name="onTherapy"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="aether.diagnosises_search">
+            <field name="name">aether Diagnosises search</field>
+            <field name="model">aether.diagnosis</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="patient"/>
+                    <field name="psychologist"/>
+                </search>
+            </field>
+        </record>
+        <!--
+        <menuitem name="Server to list" id="aether" parent="aether.menu_2"
+                  action="aether.action_server"/>
+        -->
+    </data>
+</odoo>
