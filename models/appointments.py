@@ -6,7 +6,7 @@ from odoo import api
 from odoo import fields
 from odoo import models
 
-class Appointment(models.Model):
+class appointment(models.Model):
     _name = "aether.appointments"
     name = fields.Char(required=True)
     appointmentChange = fields.Boolean(string="AppointmentChange", required=True)

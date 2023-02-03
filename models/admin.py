@@ -9,4 +9,4 @@ from odoo import models
 class admin(models.Model):
     _inherit = 'res.users'
     
-    mentaldisease_ids = fields.One2many('aether.mentaldisease', 'admin_id', string="MentalDisease")
+    mentaldisease_ids = fields.One2many('aether.mentaldisease', 'admin_ids', string="MentalDisease")
