@@ -1,3 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_aether_psychologist,psychologist,model_aether_dailynote,group_psychologist,1,1,0,0
-access_aether_patient,patient,model_aether_patient,group_patient,1,1,0,0
+access_aether_psychologist,psychologist,model_aether_psychologist,group_psychologist,1,1,1,1
+access_aether_patient,patient,model_aether_patient,group_patient,1,1,1,1
+access_aether_dailynote,dailynote,model_aether_dailynote,group_patient,1,1,1,1
+access_aether_diagnosis,diagnosis,model_aether_diagnosis,group_patient,1,1,1,1
+access_aether_appointments,appointments,model_aether_appointments,group_patient,1,1,1,1
+access_aether_mentaldisease,mentaldisease,model_aether_mentaldisease,group_patient,1,1,1,1
