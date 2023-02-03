@@ -70,7 +70,7 @@
                             <separator string="Note Content" colspan="2"/>
                             <field name="dnNoteText"/>
                             <separator string="Note Response" colspan="2"/>
-                            <field name="dnNoteComment"/>
+                            <field name="dnNoteComment" readonly="1"/>
                         </group>
                     </group>
                 </form>

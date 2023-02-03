@@ -35,7 +35,7 @@ class dailynote(models.Model):
         if fields.Date.from_string(self.dnNoteDate) != fields.Date.from_string(fields.Date.today()):
             return {
                 'warning': {
-                    'title': "Wrong date",
+                    'title': "Date change",
                     'message': "Creating a new note must contain todays date, if you want to create another days date, check if the note date is not already inserted",
                 }
             }

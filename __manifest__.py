@@ -9,7 +9,9 @@
         Allows:
             - Create new psychologist and patients
             - CRUD Daily Notes
-            - Make appointments
+            - CRUD Diagnosis
+            - CRUD Mental Diseases
+            - CRUD Appointments
     """,
 
     'author': "Aether",
@@ -19,7 +21,7 @@
     # Check https://github.com/odoo/odoo/blob/10.0/odoo/addons/base/module/module_data.xml
     # for the full list
     'category': 'Uncategorized',
-    'version': '0.1',
+    'version': '0.8',
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
