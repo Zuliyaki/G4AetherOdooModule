@@ -4,6 +4,7 @@ from odoo import models
 
 class psychologist(models.Model):
     _inherit = 'res.users'
+    _name = 'aether.psychologist'
     
     diagnosis_id = fields.One2many('aether.diagnosis','psychologist', string="Diagnosises")
     # patient_id = fields.One2many('aether.patient', 'psychologist', string="Patients")

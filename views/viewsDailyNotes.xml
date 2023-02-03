@@ -1,5 +1,17 @@
 <odoo>
     <data>
+        <!--
+        <record id="idea_category_list2" model="ir.ui.view">
+            <field name="name">id.category.list2</field>
+            <field name="model">idea.category</field>
+            <field name="inherit_id" ref="id_category_list"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='description']" position="after">
+                    <field name="idea_ids" string="Number of ideas"/>
+                </xpath>
+            </field>
+        </record>
+        -->
         <!-- actions opening views on models -->
         <record model="ir.actions.act_window" 
                 id="action_list_create_dailynote">
