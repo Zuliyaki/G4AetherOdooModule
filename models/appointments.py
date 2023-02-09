@@ -20,20 +20,4 @@ class appointment(models.Model):
     
     psychologist = fields.Many2one('res.users', ondelete='cascade', string="Psychologist", required=True)
  
- 
-    @api.onchange('Date', 'appointmentDate')
-    def _verify_Available_Dates(self):
-        if self.Date < today:
-            return {'warning': {
-                'title': "Incorrect 'Date' value", 
-                'message': "The Date is not available today.", },
-            }
-            
-            if self.Date < len(self.appointmentDate):
-                return {'warning': {
-                'title': "Too Many Dates", 
-                'message': "Please Change Date", },
-            }
-            
-            
-            
+   
