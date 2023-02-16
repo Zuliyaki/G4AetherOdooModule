@@ -11,10 +11,6 @@
         <!-- actions -->
         <menuitem id="menu_appointments" 
                   parent="aether.management"
-                  name="Apointment"/>
-
-        <menuitem id="menu_appointment_create" 
-                  parent="menu_appointments"
                   name="Create Appointment"
                   action="action_list_create_appointments"/> 
         
@@ -29,6 +25,7 @@
                     <field name="patient"/>
                     <field name="psychologist"/>
                     <field name="name"/>
+                    <field name="dailynote"/>
                 </tree>
             </field>
         </record>
@@ -47,6 +44,7 @@
                             <field name="appointmentDate"/>
                             <field name="patient"/>
                             <field name="psychologist"/>
+                            <field name="dailynote"/>
                         </group>
                     </group>
                 </form>

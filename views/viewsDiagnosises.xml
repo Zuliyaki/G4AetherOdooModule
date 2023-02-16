@@ -11,12 +11,10 @@
         <!-- actions -->
         <menuitem id="menu_diagnosises" 
                   parent="aether.management"
-                  name="Diagnosises"/>
-        
-        <menuitem id="menu_diagnosises_create" 
-                  parent="menu_diagnosises"
-                  name="Create Diagnosis"
+                   name="Create Diagnosis"
                   action="action_list_create_diagnosis"/>
+        
+ 
         
         <!-- explicit list view definition -->
         <record model="ir.ui.view" id="aether.diagnosises_tree">

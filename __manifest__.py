@@ -28,15 +28,17 @@
 
     # always loaded
     'data': [
-        'security/security.xml',
-        'security/ir.model.access.csv',
-        'views/menu.xml',
+    
+    
+        #'security/security.xml',
+        #'security/ir.model.access.csv',
+        #'views/menu.xml',
         'views/views.xml',
         'views/viewsDailyNotes.xml',
         'views/viewsMentalDisease.xml',
         'views/viewsAppointments.xml',
         'views/viewsDiagnosises.xml',
-        # 'views/templates.xml',
+        'views/templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

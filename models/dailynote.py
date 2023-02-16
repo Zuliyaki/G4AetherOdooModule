@@ -13,10 +13,19 @@ class dailynote(models.Model):
     dnNoteText = fields.Text(string="Text", required=True)
     dnNoteComment = fields.Text(string="Comment", required=True)
     dnNoteStatus = fields.Selection([('Readed', 'READED'), ('NotReaded', 'NOTREADED')], string="Status", default='NotReaded')
-    dnNoteDate = fields.Date(string="Date", required=True ,default=fields.Date.from_string(fields.Date.today()))
-    dnNoteDateLastEdited = fields.Date(string="Edit date" ,default=fields.Date.from_string(fields.Date.today()))
+    dnNoteDate = fields.Date(string="Date", required=True, default=fields.Date.from_string(fields.Date.today()))
+    dnNoteDateLastEdited = fields.Date(string="Edit date", default=fields.Date.from_string(fields.Date.today()))
     dnDayScore = fields.Float(string="Score", required=True, default=5)
     dnNoteReadable = fields.Boolean(string="Readable")
+    
+       
+    
+    #Modify the application so that an Appointment can have many "Daily Notes" and a "Daily Notes" 
+    #can be in many Appointments (Many to many)
+    
+    appointment = fields.Many2many("aether.appointments", ondelete='cascade', string="Appointment", required=True)
+    
+    
     
     # onchange handler for score
     @api.onchange('dnDayScore')
